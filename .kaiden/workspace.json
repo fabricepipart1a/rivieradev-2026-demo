@@ -1,0 +1,29 @@
+{
+  "environment": [
+    {
+      "name": "CLAUDE_CODE_USE_VERTEX",
+      "value": "1"
+    },
+    {
+      "name": "CLOUD_ML_REGION",
+      "value": "global"
+    },
+    {
+      "name": "ANTHROPIC_VERTEX_PROJECT_ID",
+      "value": "fpipart"
+    }
+  ],
+  "mounts": [
+    {
+      "host": "/Users/fpipart/.config/gcloud/application_default_credentials.json",
+      "target": "$HOME/.config/gcloud/application_default_credentials.json",
+      "ro": true
+    }
+  ],
+  "skills": [
+    "/Users/fpipart/.claude/skills/quarkus-weather-cli-demo"
+  ],
+  "network": {
+    "mode": "allow"
+  }
+}
